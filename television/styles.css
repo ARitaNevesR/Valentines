@@ -97,3 +97,17 @@ body {
     color: grey;
     font-size: 17px;
 }
+
+.go-back {
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-family: "Poppins";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.go-back:hover{
+    background-color: grey;
+    transform: scale(1.2);
+}
