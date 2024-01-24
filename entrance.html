@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Love you~♥</title>
+	<link rel="stylesheet" href="/css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<div id="canvas-container">
+	<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="js/game.js"></script>
+	
+<!-------------------------------------- HELP ------------------------------------------>
+	<div id="show" class="show" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Help!</h1>
+				<p>Kitchen: Rita has a message for you!</p>
+				<p>Livingroom: The television has something fun to watch!</p>
+				<p>Bathroom: Something smeels funny-</p>
+				<p>Top Bedroom: If you want to laugh xD</p>
+				<p>Bottom Bedroom: I left a small note on the drawer hehe</p>
+				<button class="confirm" onclick="hideHelpPopup()">Thanks!</button>
+				<br>
+			</div>
+		</div>
+	</div>
+<!-------------------------------------- RITA ------------------------------------------>
+	<div id="rita" class="rita" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Hello love!</h1>
+				<div class="message">
+				<p>Happy Valentines!!</p>
+				<p>As this is our first Valentine's Day, I wanted to do something special. So I decided to make a little exploration game with little hidden details!</p>
+				<p>If you need help finding them, there's a help icon in the bottom right-hand corner of the living room! (just step on it) </p>
+				<p>Thank you for being the best boyfriend ever! Love you just enough!~♥</p>
+				<p>Hope you enjoy my Valentine's present!</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="hideRita()">Love you too!~♥</button>
+					<button class="confirm" onclick="teleportRita()">Huh- Could be better...</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+<!-------------------------------------- TELEVISION ------------------------------------------>
+	<div id="television" class="television" style="display: none;">
+		<div class="pop-div2">
+			<div class="pop2"><br>
+				<p>Do you want to check whats on the television?</p>
+				<div class="buttons">
+					<button class="confirm" onclick="televisionTeleport()">Yes!</button>
+					<button class="confirm" onclick="hideTelevision()">Not really...</button>
+				</div><br>
+			</div>
+		</div>
+	</div>
+<!-------------------------------------- JAVASCRIPT ------------------------------------------>
+	<script>
+		//Help
+		function hideHelpPopup() {
+			var popupDiv = document.getElementById("show");
+			popupDiv.style.display = 'none';
+		}
+		//Rita
+		function hideRita() {
+			var popupDiv = document.getElementById("rita");
+			popupDiv.style.display = 'none';
+		}
+		function teleportRita(){
+        	window.location.href = "rita/rita.html";
+    	}
+		//Television
+		function hideTelevision() {
+			var popupDiv = document.getElementById("television");
+			popupDiv.style.display = 'none';
+		}
+		function televisionTeleport(){
+        	window.location.href = "television/videos.html";
+    	}
+	</script>
+</body>
+</html>

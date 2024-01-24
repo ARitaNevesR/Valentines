@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valentines</title>
+	<link rel="stylesheet" href="../css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<div id="canvas-container">
+	<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="../js/hall.js"></script>
+
+	<!-------------------------------------- RITA ------------------------------------------>
+	<div id="gallery" class="gallery" style="display: none;">
+		<div class="pop-div2">
+			<div class="pop2">
+				<p>Do you want to check the gallery?</p>
+				<div class="buttons">
+					<button class="confirm" onclick="teleportGallery()">Take me there~♥</button>
+					<button class="confirm" onclick="hideGallery()">Maybe later!</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//Gallery
+		function hideGallery() {
+			var popupDiv = document.getElementById("gallery");
+			popupDiv.style.display = 'none';
+		}
+		function teleportGallery(){
+			window.location.href = "../gallery/gallery.html";
+		}
+	</script>
+</body>
+</html>

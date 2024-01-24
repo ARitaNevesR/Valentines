@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valentines</title>
+	<link rel="stylesheet" href="../css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<div id="canvas-container">
+	<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="../js/bathroom.js"></script>
+
+	<div id="poop" class="poop" style="display: none;">
+		<div class="pop-div2">
+			<div class="pop2">
+				<p>As stinky as you :> </p>
+				<button class="confirm" onclick="hideRita()">...</button><br>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//Rita
+		function hideRita() {
+			var popupDiv = document.getElementById("poop");
+			popupDiv.style.display = 'none';
+		}
+	</script>
+</body>
+</html>

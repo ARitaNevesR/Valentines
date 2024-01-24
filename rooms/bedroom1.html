@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valentines</title>
+	<link rel="stylesheet" href="../css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<div id="canvas-container">
+	<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="../js/bedroom1.js"></script>
+
+<!-------------------------------------- TELEVISION ------------------------------------------>
+	<div id="television" class="television" style="display: none;">
+		<div class="pop-div2">
+			<div class="pop2">
+				<p>Do you want to check whats on the television?</p>
+				<div class="buttons">
+					<button class="confirm" onclick="showMeme()">Yes!</button>
+					<button class="confirm" onclick="hideTelevision()">Maybe Later!</button>
+				</div><br>
+			</div>
+		</div>
+	</div>
+<!-------------------------------------- MEMES ------------------------------------------>
+<div id="meme" class="meme" style="display: none;">
+	<div class="pop-div4">
+		<div class="pop4">
+			<p>Meme Generator!</p><br>
+			<div class="meme-img">
+				<img src="" alt="meme">
+			</div><br>
+			<div class="buttons">
+				<button class="confirm" onclick="nextMeme()">Next</button>
+				<button class="confirm" onclick="hideMeme()">Close</button>
+			</div>
+		</div><br>
+	</div>
+</div>
+
+<!-------------------------------------- JAVASCRIPT ------------------------------------------>
+	<script>
+		//Television
+		function hideTelevision() {
+			var popupDiv = document.getElementById("television");
+			popupDiv.style.display = 'none';
+		}
+		//Meme
+		function showMeme(){
+			var popupDiv1 = document.getElementById("meme");
+			popupDiv1.style.display = 'block';
+			var popupDiv2 = document.getElementById("television");
+			popupDiv2.style.display = 'none';
+    	}
+
+		function hideMeme() {
+			var popupDiv = document.getElementById("meme");
+			popupDiv.style.display = 'none';
+		}
+
+		//Meme Generator
+		let img = document.querySelector(".meme img");
+        async function randomMemeGenerator(){
+            let res = await fetch("https://meme-api.com/gimme");    
+            let json = await res.json();
+            let url = json.url;
+            img.src = url;
+
+        }
+        randomMemeGenerator();
+        
+		function nextMeme() {
+			randomMemeGenerator()
+		}
+	</script>
+</body>
+</html>

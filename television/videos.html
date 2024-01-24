@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h3 class="heading">Some of our precious moments~♥</h3>
+
+    <div class="container">
+
+      <div class="main-video">
+        <div class="video">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/qOai8BBGD2c?si=axKklCsEixeAhWmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">Our first Valorant Video~♥</h3>
+        </div>
+      </div>
+
+      <div class="video-list">
+        <div class="vid active">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/qOai8BBGD2c?si=axKklCsEixeAhWmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">Our first Valorant Video~♥</h3>
+        </div>
+
+        <div class="vid">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/rOc_qeUlaZc?si=-HtjQQ3YklJhqjsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">The most awkward and cringe to start of a relationship~♥</h3>
+        </div>
+
+        <div class="vid">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/PSaunKoylLE?si=Xk6x7p9O48h7mUDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">More Valorant moments~♥</h3>
+        </div>
+
+        <div class="vid">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/93hm5mDVYlI?si=e4yh9W-LDwBIwCJe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">EVEN MORE VALORANT~♥</h3>
+        </div>
+
+        <div class="vid">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/5YlVGJJsFe4?si=87JEc6DqdJDGGg_J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">I could feel my braincells dying xD</h3>
+        </div>
+
+        <div class="vid">
+            <iframe class="video-youtube" src="https://www.youtube.com/embed/T2D0dFAWWwg?si=4pR2tNrYJC2C4hc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="title">Some funny moments on ESO!</h3>
+        </div>
+      </div>
+
+    </div> 
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video iframe');
+        let title = document.querySelector('.main-video .title')
+
+        listVideo.forEach(iframe =>{
+            iframe.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                iframe.classList.add('active');
+                if (iframe.classList.contains('active')){
+                    let src = iframe.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = iframe.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+    </script>
+</body>
+</html>
