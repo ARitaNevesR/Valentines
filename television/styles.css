@@ -105,6 +105,7 @@ body {
     font-family: "Poppins";
     font-weight: bold;
     cursor: pointer;
+    width: 150px;
 }
 
 .go-back:hover{
