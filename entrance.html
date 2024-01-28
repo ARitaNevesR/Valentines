@@ -36,12 +36,97 @@
 				<p>Happy Valentines!!</p>
 				<p>As this is our first Valentine's Day, I wanted to do something special. So I decided to make a little exploration game with little hidden details!</p>
 				<p>If you need help finding them, there's a help icon in the bottom right-hand corner of the living room! (just step on it) </p>
-				<p>Thank you for being the best boyfriend ever! Love you just enough!~♥</p>
+				<p>I left a lil note for you in the laptop at the kitchen table! Check it out~♥</p>
 				<p>Hope you enjoy my Valentine's present!</p>
 				</div><br>
 				<div class="buttons">
 					<button class="confirm" onclick="hideRita()">Love you too!~♥</button>
 					<button class="confirm" onclick="teleportRita()">Huh- Could be better...</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+<!-------------------------------------- LAPTOP ------------------------------------------>
+	<div id="laptop1" class="laptop1" style="display: block;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 1</h1>
+				<div class="message">
+				<p>Hello my love!!! Its finally Valentine's!!</p>
+				<p>It's a bit sad that we can't be together on this day, but I am pretty sure that there will be a lot more Valentine's where we will be able to go on a proper date!</p>
+				<p>I had thousands of ideas of what i would write here, but now that I am typing it down I have no clue of what to put here... There's so much I wanna tell you-</p>
+				<p>I know we haven't been together for a long time, but the few months we spent together have been the best I ever had in a relationship!!!!</p>
+				<p>To be honest, I never thought that i would even find someone as nice and caring as you... Everyday when I wake up and see one of your messages I think to myself: "Damn, how did I manage to get this man???"</p>
+			</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="hideLaptop1()">Close</button>
+					<button class="confirm" onclick="nextLaptop1()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop2" class="laptop2" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 2</h1>
+				<div class="message">
+				<p>When I am with you I actually feel loved- Its a bit scary and lovely at same time ahaha I feel like I am getting too attached!!</p>
+				<p>I love the way you smile or how you sound so happy when you are talking about something that you love. I love how you can be the weirdest person on earth and a few minutes later be dead serious about something ahaha</p>
+				<p>I love you so so so so much. You have no idea of how much I care about you... The day you stepped into my life you changed it into something so beautiful and meaningful.</p>
+				<p>To be honest... I know i have a lot of flaws... I get anxious very often or stressed over very small stuff... And i deeply apologize for it (yah--- I apologize too much.. You are right ahaha) </p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop2()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop2()">Close</button>
+					<button class="confirm" onclick="nextLaptop2()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop3" class="laptop3" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 3</h1>
+				<div class="message">
+				<p>Before we meet I was stuck in a loop- Being it with friends or people i was in a romantic situation with, for the past one year stuff it has been... Pretty rough ahaha</p>
+				<p>The amount of people that hurt me was INSANE- I remember crying myself to sleep almost every night... That is, if i could even manage to sleep properly ahaha I had my sleeping medicine for a reason</p>
+				<p>I know I already told this over and over again, but I really am a VERY insecure person... I overthink about everything... I am sorry if I left you in a bad spot because of it T^T</p>
+				<p>I love the way you keep reassuring me about the small things like: "Babe, you know that you are kind and beautiful, right?" or the simple "I love you" out of the blue.. You have no idea of how much meaning it holds to me</p>
+			</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop3()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop3()">Close</button>
+					<button class="confirm" onclick="nextLaptop3()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop4" class="laptop4" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 4</h1>
+				<div class="message">
+					<p>I am far from perfect-- I make a lot of mistakes. I can be moody sometimes. But I promise you that if I say I love you I actually do mean it.</p>
+					<p></p>
+					<p>No matter what happens, how many disagreements we have or how many miles apart we are, just know that my feelings for you will never change.</p>
+					<p>The good moments and time we have spent together means more to me than any of the bad moments we might come across in the future!</p>
+					<p>I will do my best to be someone you can proudly say that its your girlfriend, and will make sure to make you feel loved every single day. Because you are loved.</p>
+					<p>If I could I would give you galaxies, because love, you deserve way more than just the world ♥ </p>
+					<br>
+					<p>From your caring girlfriend, Rita!</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop4()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop4()">Close</button>
+					<button class="confirm" onclick="nextLaptop4()"><i class='fas fa-chevron-right'></i></button>
 				</div>
 				<br>
 			</div>
@@ -73,6 +158,60 @@
 		}
 		function teleportRita(){
         	window.location.href = "rita/rita.html";
+    	}
+		//Laptop Hide
+		function hideLaptop1() {
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop2() {
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop3() {
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop4() {
+			var popupDiv = document.getElementById("laptop4");
+			popupDiv.style.display = 'none';
+		}
+		//Laptop Next/Previous
+		function nextLaptop1(){
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop2");
+			popupDiv1.style.display = 'block';
+    	}
+		function previousLaptop2(){
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop2");
+			popupDiv1.style.display = 'none';
+    	}
+		function nextLaptop2(){
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop3");
+			popupDiv1.style.display = 'block';
+    	}
+		function previousLaptop3(){
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop3");
+			popupDiv1.style.display = 'none';
+    	}
+		function nextLaptop3(){
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop4");
+			popupDiv1.style.display = 'block';
+    	}
+		function previousLaptop4(){
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop4");
+			popupDiv1.style.display = 'none';
     	}
 		//Television
 		function hideTelevision() {
