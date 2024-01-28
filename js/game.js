@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -77,6 +76,16 @@ var help = {
 const mark = new Image();
 mark.src = "sprites/mark.png";
 
+var laptop = {
+    x: 750,
+    y: 185,
+    width: 15,
+    height: 10
+}
+
+const laptopSprite = new Image();
+laptopSprite.src = "../sprites/laptop.png";
+
 const background1 = new Image();
 background1.src = "scene/room.png";
 
@@ -89,6 +98,12 @@ function draw() {
     //END MAP
 
     drawMaze();
+
+    ctx.drawImage(laptopSprite, 720, 175, 75, 70);
+    //LAPTOP
+    //ctx.fillStyle = "blue";
+    //ctx.fillRect(laptop.x, laptop.y, laptop.width, laptop.height);
+    //LAPTOP END
 
     //DOOR
     //ctx.fillStyle = "green";
@@ -280,6 +295,16 @@ function handleMovement() {
         showHelpPopup();
         player.x = 800;
         player.y = 580;
+    }
+    //TELEVISION
+    function showLaptop() {
+        var popupDiv = document.getElementById("laptop1");
+        popupDiv.style.display = 'block';
+    }
+    if (player.x + player.width >= laptop.x && player.x <= laptop.x + laptop.width && player.y + player.height >= laptop.y && player.y <= laptop.y + laptop.height) {
+        showLaptop();
+        player.x = 707;
+        player.y = 220;
     }
 }
 
