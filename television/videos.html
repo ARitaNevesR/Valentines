@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <br>
+    <div class="container">
+
+        <div class="main-video">
+            <div class="video">
+                <iframe class="video-youtube" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=UYaQhXuLebnuYtOL"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3 class="title">GET</h3>
+            </div>
+        </div>
+
+        <div class="video-list">
+            <div class="vid active">
+                <iframe class="video-youtube"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=cs80FGN5Re1QMP_I;start=85"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <h3 class="title">GET</h3>
+            </div>
+            <div class="vid active">
+                <iframe class="video-youtube"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=cs80FGN5Re1QMP_I;start=85"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <h3 class="title">YOURSELF</h3>
+            </div>
+
+            <div class="vid">
+                <iframe class="video-youtube"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=cs80FGN5Re1QMP_I;start=85"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <h3 class="title">RICK</h3>
+            </div>
+
+            <div class="vid">
+                <iframe class="video-youtube"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=cs80FGN5Re1QMP_I;start=85"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <h3 class="title">ROLLED</h3>
+            </div>
+
+        </div>
+        <a href="/index.html" class="go-back">Go Back</a>
+
+    </div>
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video iframe');
+        let title = document.querySelector('.main-video .title')
+
+        listVideo.forEach(iframe => {
+            iframe.onclick = () => {
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                iframe.classList.add('active');
+                if (iframe.classList.contains('active')) {
+                    let src = iframe.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = iframe.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+    </script>
+</body>
+
+</html>

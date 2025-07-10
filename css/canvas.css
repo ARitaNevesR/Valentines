@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+body {
+  background-color: black;
+  color: black;
+  font-family: "Poppins";
+}
+
+#inicio {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 300px;
+}
+
+#inicio h1 {
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+canvas {
+  border: 2px solid black;
+  background-color: transparent;
+  position: absolute;
+  width: 80rem;
+}
+
+.show {
+  display: hidden;
+}
+
+.pop-div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.pop-div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.pop-div3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.pop-div4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pop1 {
+  background-color: #f8bbd0;
+  border: 5px solid #ff80ab;
+  width: 500px;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pop2 {
+  background-color: #f8bbd0;
+  border: 5px solid #ff80ab;
+  width: 450px;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pop3 {
+  background-color: #f8bbd0;
+  border: 5px solid #ff80ab;
+  width: 450px;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pop4 {
+  background-color: #f8bbd0;
+  border: 5px solid #ff80ab;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 2vw;
+}
+
+.confirm {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.confirm:hover {
+  transform: scale(1.2);
+  background-color: lightgray;
+}
+
+.message {
+  width: 350px;
+  height: auto;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.meme-img img {
+  width: 400px;
+  height: auto;
+}

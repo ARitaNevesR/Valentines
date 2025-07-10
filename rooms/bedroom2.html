@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Valentines</title>
+	<link rel="stylesheet" href="../css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+	<div id="canvas-container">
+		<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="../js/bedroom2.js"></script>
+
+	<!------------------------- DRAWER -------------------------->
+	<div id="drawer" class="drawer" style="display: none;">
+		<div class="pop-div3">
+			<div class="pop3">
+				<h1>You found a note</h1>
+				<p>Do you want to read it?</p><br>
+				<div class="buttons">
+					<button class="confirm" onclick="showNote()">Yes!</button>
+					<button class="confirm" onclick="hideDrawer()">Not really...</button>
+				</div><br>
+			</div>
+		</div>
+	</div>
+	<!------------------------- NOTE -------------------------->
+	<div id="note" class="note" style="display: none;">
+		<div class="pop-div3">
+			<div class="pop3">
+				<h1>*Note*</h1>
+				<p>*I recorded something funny!*</p><br>
+				<div class="buttons">
+					<button class="confirm" onclick="playAudio()">Listen to it</button>
+					<button class="confirm" onclick="hideNote()">Put note away</button>
+				</div><br>
+			</div><br>
+		</div>
+	</div>
+
+	<script>
+		//DRAWER
+		function hideDrawer() {
+			var popupDiv = document.getElementById("drawer");
+			popupDiv.style.display = 'none';
+		}
+		function showNote() {
+			var popupDiv = document.getElementById("note");
+			popupDiv.style.display = 'block';
+			var popupDiv2 = document.getElementById("drawer");
+			popupDiv2.style.display = 'none';
+		}
+
+		//NOTE
+		function hideNote() {
+			var popupDiv = document.getElementById("note");
+			popupDiv.style.display = 'none';
+		}
+		function playAudio() {
+			var popupDiv = document.getElementById("note");
+			popupDiv.style.display = 'none';
+			var audio = new Audio("../audio/rick.mp3");
+			audio.play();
+		}
+	</script>
+</body>
+
+</html>

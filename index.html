@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Happy Valentines~♥</title>
+	<link rel="stylesheet" href="/css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+	<div id="canvas-container">
+		<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+
+	<script src="js/game.js"></script>
+
+	<!-------------------------------------- HELP ------------------------------------------>
+	<div id="show" class="show" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Help!</h1>
+				<p>Kitchen: Rita has a message for you!</p>
+				<p>Livingroom: The television has something fun to watch!</p>
+				<p>Bathroom: Something smeels funny-</p>
+				<p>Top Bedroom: If you want to laugh xD</p>
+				<p>Bottom Bedroom: I left a small note on the drawer hehe</p>
+				<button class="confirm" onclick="hideHelpPopup()">Thanks!</button>
+				<br>
+			</div>
+		</div>
+	</div>
+	<!-------------------------------------- RITA ------------------------------------------>
+	<div id="rita" class="rita" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Hello love!</h1>
+				<div class="message">
+					<p>Happy Valentines!!</p>
+					<p>As this is our first Valentine's Day, I wanted to do something special. So I decided to make a
+						little exploration game with little hidden details!</p>
+					<p>If you need help finding them, there's a help icon in the bottom right-hand corner of the living
+						room! (just step on it) </p>
+					<p>I left a lil note for you in the laptop at the kitchen table! Check it out~♥</p>
+					<p>Hope you enjoy my Valentine's present!</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="hideRita()">Love you too!~♥</button>
+					<button class="confirm" onclick="teleportRita()">Huh- Could be better...</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<!-------------------------------------- LAPTOP ------------------------------------------>
+	<div id="laptop1" class="laptop1" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 1</h1>
+				<div class="message">
+					<p>Hello my love!!! Its finally Valentine's!!</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+						but also the leap into electronic typesetting, remaining essentially unchanged. It was
+						popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+						and more recently with desktop publishing software like Aldus PageMaker including versions of
+						Lorem Ipsum.</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="hideLaptop1()">Close</button>
+					<button class="confirm" onclick="nextLaptop1()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop2" class="laptop2" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 2</h1>
+				<div class="message">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+						but also the leap into electronic typesetting, remaining essentially unchanged. It was
+						popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+						and more recently with desktop publishing software like Aldus PageMaker including versions of
+						Lorem Ipsum.</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop2()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop2()">Close</button>
+					<button class="confirm" onclick="nextLaptop2()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop3" class="laptop3" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 3</h1>
+				<div class="message">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+						but also the leap into electronic typesetting, remaining essentially unchanged. It was
+						popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+						and more recently with desktop publishing software like Aldus PageMaker including versions of
+						Lorem Ipsum.</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop3()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop3()">Close</button>
+					<button class="confirm" onclick="nextLaptop3()"><i class='fas fa-chevron-right'></i></button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<div id="laptop4" class="laptop4" style="display: none;">
+		<div class="pop-div1">
+			<div class="pop1">
+				<h1>Page 4</h1>
+				<div class="message">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+						but also the leap into electronic typesetting, remaining essentially unchanged. It was
+						popularised in the 1960s with the release of Letraset sheets containing.</p>
+					<br>
+					<p>From your caring girlfriend!</p>
+				</div><br>
+				<div class="buttons">
+					<button class="confirm" onclick="previousLaptop4()"><i class='fas fa-chevron-left'></i></button>
+					<button class="confirm" onclick="hideLaptop4()">Close</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<!-------------------------------------- TELEVISION ------------------------------------------>
+	<div id="television" class="television" style="display: none;">
+		<div class="pop-div2">
+			<div class="pop2"><br>
+				<p>Do you want to check whats on the television?</p>
+				<div class="buttons">
+					<button class="confirm" onclick="televisionTeleport()">Yes!</button>
+					<button class="confirm" onclick="hideTelevision()">Not really...</button>
+				</div><br>
+			</div>
+		</div>
+	</div>
+	<!-------------------------------------- JAVASCRIPT ------------------------------------------>
+	<script>
+		//Help
+		function hideHelpPopup() {
+			var popupDiv = document.getElementById("show");
+			popupDiv.style.display = 'none';
+		}
+		//Rita
+		function hideRita() {
+			var popupDiv = document.getElementById("rita");
+			popupDiv.style.display = 'none';
+		}
+		function teleportRita() {
+			window.location.href = "rita/rita.html";
+		}
+		//Laptop Hide
+		function hideLaptop1() {
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop2() {
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop3() {
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'none';
+		}
+		function hideLaptop4() {
+			var popupDiv = document.getElementById("laptop4");
+			popupDiv.style.display = 'none';
+		}
+		//Laptop Next/Previous
+		function nextLaptop1() {
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop2");
+			popupDiv1.style.display = 'block';
+		}
+		function previousLaptop2() {
+			var popupDiv = document.getElementById("laptop1");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop2");
+			popupDiv1.style.display = 'none';
+		}
+		function nextLaptop2() {
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop3");
+			popupDiv1.style.display = 'block';
+		}
+		function previousLaptop3() {
+			var popupDiv = document.getElementById("laptop2");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop3");
+			popupDiv1.style.display = 'none';
+		}
+		function nextLaptop3() {
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'none';
+			var popupDiv1 = document.getElementById("laptop4");
+			popupDiv1.style.display = 'block';
+		}
+		function previousLaptop4() {
+			var popupDiv = document.getElementById("laptop3");
+			popupDiv.style.display = 'block';
+			var popupDiv1 = document.getElementById("laptop4");
+			popupDiv1.style.display = 'none';
+		}
+		//Television
+		function hideTelevision() {
+			var popupDiv = document.getElementById("television");
+			popupDiv.style.display = 'none';
+		}
+		function televisionTeleport() {
+			window.location.href = "television/videos.html";
+		}
+	</script>
+</body>
+
+</html>
